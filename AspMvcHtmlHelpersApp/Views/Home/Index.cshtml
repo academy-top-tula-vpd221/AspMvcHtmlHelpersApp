@@ -1,0 +1,11 @@
+﻿@using AspMvcHtmlHelpersApp
+@using AspMvcHtmlHelpersApp.Helpers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Cities:</h2>
+@Html.CreateList((IEnumerable<string>)ViewData["Cities"])
+
+<h2>Names:</h2>
+@Html.CreateList((IEnumerable<string>)ViewData["Names"])
