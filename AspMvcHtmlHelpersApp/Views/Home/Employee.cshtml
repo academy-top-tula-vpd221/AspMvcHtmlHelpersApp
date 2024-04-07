@@ -1,0 +1,41 @@
+﻿@model AspMvcHtmlHelpersApp.Models.Employee
+
+
+@using(Html.BeginForm("Employee", "Home", FormMethod.Post))
+{
+    @* <form method="post" action="../Home/Employee"> *@
+    <div>
+        @* <label for="name">Name:</label><br /> *@
+        @* <input type="text" name="name" /> *@
+        @* @Html.Label("name", "Name:") *@
+        @* @Html.TextBox("name") *@
+        @Html.LabelFor(m => m.Name, "Name")
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div>
+        @* <label>Age:</label><br /> *@
+        @* <input type="number" name="age" /> *@
+        @* @Html.TextBox("age", "", new{ type = "number"}) *@
+
+        @Html.LabelFor(m => m.Age, "Age")
+        @Html.TextBoxFor(m => m.Age)
+    </div>
+    <div>
+        @Html.Label("", "C#")
+        @Html.RadioButton("lang", "C#")
+        <br/>
+        @Html.Label("", "C++")
+        @Html.RadioButton("lang", "C++")
+        <br />
+        @Html.Label("", "Java")
+        @Html.RadioButton("lang", "Java")
+        <br />
+    </div>
+
+    <div>
+        <input type="submit" value="Send" />
+    </div>
+    @* </form> *@
+}
+
+

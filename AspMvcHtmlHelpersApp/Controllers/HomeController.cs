@@ -15,6 +15,14 @@ namespace AspMvcHtmlHelpersApp.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Employee() => View();
+
+        [HttpPost]
+        public string Employee(string name, int age) => $"Name: {name}, Age: {age}";
+
+
+
         public IActionResult Privacy()
         {
             return View();
